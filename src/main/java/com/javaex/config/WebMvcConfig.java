@@ -9,6 +9,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
 		registry.addMapping("/api/**") // 경로
-				.allowedMethods("GET", "POST", "PUT", "DELETE").allowedOrigins("*");
+				.allowedMethods("GET", "POST", "PUT", "DELETE").allowedOrigins("http://localhost:8080");//flutter에서 안되면 allowedOrigins주소를 *로 바꾸면 된다. 
 	}
 }
